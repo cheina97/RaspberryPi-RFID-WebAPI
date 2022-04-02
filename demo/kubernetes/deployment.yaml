@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rfidwebservice-demo
+spec:
+  selector:
+    matchLabels:
+      app: rfidwebservice-demo
+  template:
+    metadata:
+      labels:
+        app: rfidwebservice-demo
+    spec:
+      containers:
+        - name: rfidwebservice-demo
+          image: cheina97/rfidwebservice-demo
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 80

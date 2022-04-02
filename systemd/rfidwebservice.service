@@ -1,0 +1,10 @@
+[Unit]
+Description=A simple web service exposing an RFID reader
+
+[Service]
+User=root
+WorkingDirectory=/opt/rfidWebService
+ExecStart=/opt/rfidWebService/run.sh
+
+[Install]
+WantedBy=multi.user.target

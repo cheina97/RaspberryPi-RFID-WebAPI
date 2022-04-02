@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: rfidwebservice-demo-service
+spec:
+  selector:
+    app: rfidwebservice-demo
+  ports:
+    - port: 80
+      targetPort: 80
